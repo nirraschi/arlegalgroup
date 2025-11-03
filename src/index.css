@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Personalizaciones */
+@theme {
+    --color-primary: #273352;
+    --color-secondary: #C7A17A;
+
+    --font-title: "Playfair Display", serif;
+    --font-body: "Inter", sans-serif;
+}
