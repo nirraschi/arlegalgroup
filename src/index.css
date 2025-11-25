@@ -1,10 +1,26 @@
 @import "tailwindcss";
 
-/* Personalizaciones */
+/* 🎨 1️⃣ Variables personalizadas del tema */
 @theme {
-    --color-primary: #273352;
-    --color-secondary: #C7A17A;
+    --color-primary: #0C2B4E;
+    --color-accent: #28a7da;
+    --color-secondary: #0061fe;
+    --color-text: #333333;
 
-    --font-title: "Playfair Display", serif;
-    --font-body: "Inter", sans-serif;
+    --font-title: "Poppins", sans-serif;
+    --font-body: "Lato", sans-serif;
+}
+
+/* 💅 2️⃣ Estilos base globales */
+@layer base {
+    body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: white;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
+
+    }
 }

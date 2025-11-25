@@ -1,50 +1,48 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import heroImg from '../assets/img/hero.jpg'
+import React from "react";
+import { motion } from "framer-motion";
+import heroImg from "../assets/img/hero.png";
 
 const Hero = () => {
   return (
-    <section
-      className="relative h-[80vh] flex items-center justify-center text-center text-white overflow-hidden mt-18 md:mt-12 "
-    >
-      {/* Imagen de fondo */}
+    <section className="relative flex flex-col md:flex-row h-screen overflow-hidden ">
+
       <div
-        className=" absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${heroImg})`,
-        }}
-      ></div>
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroImg})` }}
+      />
 
-      {/* Capa de color (overlay) */}
-      <div className="absolute inset-0 bg-primary/70"></div>
 
-      {/*Text content*/}
       <motion.div
-        className='flex-1 text-center md:text-left space-y-6 z-10 m-10'
+        className="flex flex-col justify-center gap-4 items-center md:items-start text-center md:text-left  flex-1 px-6 md:px-16 py-10 space-y-6 relative z-10"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
+        href="#home"
       >
-        <h1 className='text-4xl md:text-6xl font-bold'>AR Legal Group</h1>
+        <h1 className="text-4xl md:text-6xl font-bold text-primary">
+          Protegé tu futuro 
+          <br/>
+          <span className="text-5xl">y el de tu familia.</span>
+        </h1>
 
-        <p className="text-lg text-gray-300 max-w-xl">
-          Derecho civil y comercial, seguros, consumo y salud.
-          <br />
-          <span className="text-white font-semibold">
-            Una visión práctica y resolutiva.
-          </span>
+        <p className="text-lg text-gray-700 max-w-xl pr-18">
+          Más de 25 años acompañando a familias, profesionales y empresas en la protección de su futuro.
+
         </p>
 
-        <motion.a href="#contact"
-          className="inline-block bg-white text-primary px-6 py-3 rounded-lg text-lg font-semibold hover:bg-white/90 transition"
+        <motion.a
+          href="#contact"
+          className="inline-block bg-accent text-white px-6 py-2 rounded-full text-md font-semibold hover:bg-primary transition "
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.98 }}
         >
-          Contáctanos
+          Contactanos
         </motion.a>
       </motion.div>
-    </section>
-  )
-}
 
-export default Hero
+
+    </section>
+  );
+};
+
+export default Hero;
